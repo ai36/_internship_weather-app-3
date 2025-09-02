@@ -1,0 +1,32 @@
+.footer {
+  padding: var(--spacing-32);
+  text-align: center;
+
+  @media screen and (width < 1024px) {
+    padding: var(--spacing-24);
+  }
+
+  @media screen and (width < 768px) {
+    padding: var(--spacing-16);
+  }
+
+  .descr {
+    font-size: 16px;
+    line-height: 20px;
+
+    @media screen and (width < 768px) {
+      font-size: 12px;
+      line-height: 16px;
+    }
+
+    .link {
+      color: inherit;
+
+      &:focus-visible {
+        border-radius: calc(0.5 * var(--radius-6));
+        outline: 3px solid var(--color-tone-200);
+        outline-offset: 3px;
+      }
+    }
+  }
+}

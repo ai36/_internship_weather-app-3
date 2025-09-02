@@ -1,0 +1,74 @@
+.switchBtn {
+  position: relative;
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 700;
+  white-space: nowrap;
+  padding: 0;
+  border: none;
+  color: var(--color-stable-400);
+  background: none;
+  cursor: pointer;
+  user-select: none;
+
+  transition-duration: var(--transition-duration);
+  transition-property: color;
+
+  @media screen and (width < 768px) {
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  &.active {
+    color: var(--color-stable-100);
+    pointer-events: none;
+
+    &::after {
+      transform: none;
+    }
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: calc(100% + 3px);
+    right: -1px;
+    left: -1px;
+    height: 2px;
+    border-radius: 1px;
+    background: currentColor;
+
+    @media screen and (width < 768px) {
+      top: calc(100% + 1.5px);
+      right: -1px;
+      left: -0.5px;
+      height: 0.5px;
+      border-radius: 0.5px;
+    }
+  }
+
+  &::before {
+    opacity: 0;
+  }
+
+  &:hover::before {
+    opacity: 0.5;
+  }
+
+  &.active:hover::before,
+  &.active:focus::before {
+    opacity: 0;
+  }
+
+  &::after {
+    transform: scaleX(0);
+    transition: transform var(--transition-duration);
+  }
+
+  &:focus-visible {
+    border-radius: calc(0.25 * var(--radius-6));
+    outline: 3px solid var(--color-tone-200);
+    outline-offset: 6px;
+  }
+}

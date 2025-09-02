@@ -1,0 +1,60 @@
+.favorite {
+  position: absolute;
+  inset: 0;
+  left: unset;
+  width: var(--size-56);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(25px);
+  border-radius: var(--radius-8);
+  cursor: pointer;
+
+  @media screen and (width < 768px) {
+    width: var(--size-40);
+  }
+
+  .icon {
+    width: var(--size-24);
+    height: var(--size-24);
+    color: var(--color-stable-100);
+
+    transition: color var(--transition-duration);
+
+    @media screen and (width < 768px) {
+      width: var(--size-16);
+      height: var(--size-16);
+    }
+  }
+
+  &:hover {
+    .icon {
+      color: light-dark(var(--color-filled-400), var(--color-filled-600));
+    }
+  }
+
+  &.disabled {
+    cursor: not-allowed;
+
+    .icon {
+      color: light-dark(var(--color-tone-500), var(--color-tone-400));
+    }
+  }
+}
+
+&:has(.checkbox:focus-visible) {
+  .favorite {
+    outline: 3px solid var(--color-tone-200);
+    outline-offset: -6px;
+
+    .icon {
+      color: light-dark(var(--color-filled-400), var(--color-filled-600));
+    }
+  }
+}
+
+.checkbox {
+  appearance: none;
+  position: absolute;
+  outline: none;
+}

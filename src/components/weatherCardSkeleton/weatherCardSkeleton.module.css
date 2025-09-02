@@ -1,0 +1,72 @@
+.queryItem {
+  .queryBtn {
+    width: 100%;
+    pointer-events: none;
+    display: grid;
+    grid-template: auto auto / auto auto;
+    row-gap: var(--spacing-8);
+    padding: var(--spacing-16);
+    border-radius: var(--radius-8);
+    background-color: var(--color-tone-200);
+
+    transition-duration: var(--transition-duration);
+    transition-property: background-color;
+
+    @media screen and (width < 768px) {
+      padding: var(--spacing-12);
+    }
+
+    div {
+      border-radius: var(--radius-8);
+      background-color: var(--color-tone-100);
+
+      transition-duration: var(--transition-duration);
+      transition-property: background-color;
+    }
+
+    .city,
+    .temperature {
+      width: 108px;
+      height: 32px;
+
+      @media screen and (width < 768px) {
+        width: 72px;
+        height: 20px;
+      }
+    }
+
+    .temperature {
+      width: 32px;
+
+      @media screen and (width < 768px) {
+        width: 24px;
+      }
+    }
+
+    .time,
+    .feel {
+      width: 56px;
+      height: 20px;
+
+      @media screen and (width < 768px) {
+        width: 48px;
+        height: 16px;
+      }
+    }
+
+    .temperature,
+    .feel {
+      justify-self: end;
+    }
+  }
+
+  &:not(:last-child) {
+    .queryBtn {
+      margin-bottom: var(--spacing-12);
+
+      @media screen and (width < 768px) {
+        margin-bottom: var(--spacing-8);
+      }
+    }
+  }
+}

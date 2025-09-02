@@ -1,0 +1,102 @@
+.cityCardBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--spacing-8);
+  padding: var(--spacing-8);
+  font-size: 20px;
+  line-height: 24px;
+  text-align: center;
+
+  @media screen and (width < 1024px) {
+    padding-block: 0;
+  }
+
+  @media screen and (width < 768px) {
+    gap: var(--spacing-16);
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  .header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-8);
+
+    @media screen and (width < 1024px) {
+      gap: var(--spacing-6);
+    }
+
+    @media screen and (width < 768px) {
+      gap: var(--spacing-4);
+    }
+
+    span::first-letter {
+      text-transform: uppercase;
+    }
+
+    .city {
+      word-break: break-word;
+    }
+  }
+
+  .main {
+    text-align: center;
+
+    .temperature {
+      font-weight: 700;
+      font-size: 112px;
+      line-height: 1;
+
+      @media screen and (width < 768px) {
+        font-size: 56px;
+      }
+    }
+  }
+
+  .footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-8);
+
+    @media screen and (width < 1024px) {
+      gap: var(--spacing-6);
+    }
+
+    @media screen and (width < 768px) {
+      gap: var(--spacing-4);
+    }
+
+    .condition {
+      display: flex;
+      align-items: center;
+      gap: var(--spacing-8);
+
+      @media screen and (width < 1024px) {
+        gap: var(--spacing-6);
+      }
+  
+      @media screen and (width < 768px) {
+        gap: var(--spacing-4);
+      }
+
+      span::first-letter {
+        text-transform: uppercase;
+      }
+
+      .icon {
+        width: var(--size-24);
+        height: var(--size-24);
+
+        @media screen and (width < 768px) {
+          width: var(--size-16);
+          height: var(--size-16);
+        }
+      }
+    }
+  }
+}
+

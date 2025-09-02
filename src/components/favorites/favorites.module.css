@@ -1,0 +1,42 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--spacing-16);
+  margin-bottom: var(--spacing-12);
+
+  @media screen and (width < 768px) {
+    gap: var(--spacing-12);
+    margin-bottom: var(--spacing-8);
+  }
+  
+  .counter,
+  .title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+  
+    @media screen and (width < 768px) {
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+
+  &+ul {
+    margin-bottom: var(--spacing-16);
+
+    @media screen and (width < 768px) {
+      margin-bottom: var(--spacing-12);
+    }
+  }
+}
+
+.queriesList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-12);
+
+  @media screen and (width < 768px) {
+    gap: var(--spacing-8);
+  }
+}

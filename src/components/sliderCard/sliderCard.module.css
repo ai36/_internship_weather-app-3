@@ -1,0 +1,155 @@
+.sliderItem {
+  flex-shrink: 0;
+
+  .card {
+    height: 100%;
+    padding: var(--spacing-16);
+    border-radius: var(--radius-8);
+    background: var(--neutral-tone-100);
+  }
+
+  .sliderCard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--spacing-16);
+    padding: var(--spacing-16);
+    background-color: var(--color-tone-100);
+
+    transition-duration: var(--transition-duration);
+    transition-property: background-color;
+
+    @media screen and (width < 886px) {
+      flex-direction: column;
+    }
+
+    @media screen and (width < 768px) {
+      flex-direction: row;
+      gap: var(--spacing-12);
+      padding: var(--spacing-12);
+    }
+
+    @media screen and (width < 640px) {
+      flex-direction: column;
+    }
+  }
+}
+
+.hourly {
+  min-width: 167px;
+
+  @media screen and (width < 886px) {
+    min-width: 79px;
+  }
+
+  @media screen and (width < 768px) {
+    min-width: 24%;
+  }
+
+  @media screen and (width < 640px) {
+    min-width: 59px;
+  }
+}
+
+.week {
+  min-width: 275px;
+
+  @media screen and (width < 886px) {
+    min-width: 130px;
+  }
+
+  @media screen and (width < 768px) {
+    min-width: 220px;
+  }
+
+  @media screen and (width < 640px) {
+    min-width: 100px;
+  }
+}
+
+.cardImg {
+  width: var(--spacing-32);
+  height: var(--spacing-32);
+
+  @media screen and (width < 768px) {
+    width: var(--spacing-24);
+    height: var(--spacing-24);
+  }
+}
+
+.cardTitle,
+.cardTemp {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: var(--color-filled-900);
+  white-space: nowrap;
+
+  transition-duration: var(--transition-duration);
+  transition-property: color;
+
+  @media screen and (width < 768px) {
+    font-size: 12px;
+    line-height: 16px;
+  }
+}
+
+.cardTitle::first-letter {
+  text-transform: uppercase;
+}
+
+.skeleton {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  min-width: fit-content;
+
+  .cardTitle {
+    min-width: 92px;
+    height: 20px;
+    border-radius: var(--radius-8);
+    background-color: var(--color-tone-100);
+    color: transparent;
+    user-select: none;
+
+    transition-duration: var(--transition-duration);
+    transition-property: background-color;
+
+    @media screen and (width < 768px) {
+      min-width: 76px;
+      height: 16px;
+    }
+  }
+
+  .cardImg {
+    max-width: 0;
+    height: 0;  
+    padding: var(--spacing-16);
+    border-radius: var(--radius-8);
+    background-color: var(--color-tone-100);
+
+    transition-duration: var(--transition-duration);
+    transition-property: background-color;
+
+    @media screen and (width < 768px) {
+      padding: var(--spacing-12);
+    }
+  }
+
+  .cardTemp {
+    min-width: 92px;
+    height: 20px;
+    border-radius: var(--radius-8);
+    background-color: var(--color-tone-100);
+    color: transparent;
+    user-select: none;
+
+    transition-duration: var(--transition-duration);
+    transition-property: background-color;
+
+    @media screen and (width < 768px) {
+      min-width: 76px;
+      height: 16px;
+    }
+  }
+}

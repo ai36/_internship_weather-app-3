@@ -1,0 +1,102 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--spacing-16);
+  margin-bottom: var(--spacing-12);
+  color: var(--color-filled-900);
+
+  transition-duration: var(--transition-duration);
+  transition-property: color;
+
+  @media screen and (width < 768px) {
+    gap: var(--spacing-12);
+    margin-bottom: var(--spacing-8);
+    padding-inline: var(--spacing-12);
+  }
+
+  .title {
+    font-size: 24px;
+    line-height: 32px;
+
+    @media screen and (width < 768px) {
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+}
+
+.queryItem {
+  position: relative;
+
+  .queryBtn {
+    width: calc(100% + 2 * var(--spacing-16));
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: left;
+    padding: var(--spacing-12) var(--spacing-16);
+    margin-left: calc(-1 * var(--spacing-16));
+    color: var(--color-filled-900);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+
+
+    .city {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      color: var(--color-filled-600);
+
+      transition-duration: var(--transition-duration);
+      transition-property: color;
+
+      &::first-letter {
+        text-transform: uppercase;
+      }
+
+      span {
+        color: var(--color-filled-900);
+
+        transition-duration: var(--transition-duration);
+        transition-property: color;
+      }
+    }
+
+    @media screen and (width < 768px) {
+      width: calc(100% + 2 * var(--spacing-12));
+      padding: var(--spacing-8) var(--spacing-12);
+      margin-left: calc(-1 * var(--spacing-12));
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 16px;
+    }
+  }
+}
+
+&:has(:hover),
+&:has(:focus-visible),
+.queryBtn:hover,
+.queryBtn:focus-visible {
+  background-color: var(--color-filled-200);
+
+  transition-duration: var(--transition-duration);
+  transition-property: background-color;
+}
+
+.emptyMessage {
+  padding-inline: var(--spacing-16);
+  font-size: 20px;
+  line-height: 24px;
+  color: var(--color-filled-700);
+
+  transition-duration: var(--transition-duration);
+  transition-property: color;
+
+  @media screen and (width < 768px) {
+    padding-inline: var(--spacing-12);
+    font-size: 14px;
+    line-height: 16px;
+  }
+}

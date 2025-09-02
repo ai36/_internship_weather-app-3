@@ -1,0 +1,23 @@
+.nav {
+  margin-top: 2px;
+
+  @media screen and (width < 768px) {
+    margin-top: 1px;
+  }
+
+  .navList {
+    display: flex;
+    gap: var(--spacing-32);
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    @media screen and (width < 1024px) {
+      gap: var(--spacing-24);
+    }
+
+    @media screen and (width < 768px) {
+      gap: var(--spacing-16);
+    }
+  }
+}

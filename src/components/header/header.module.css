@@ -1,0 +1,35 @@
+.header {
+  position: relative;
+  z-index: 11;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-40);
+  padding: var(--spacing-32);
+
+  @media screen and (width < 1024px) {
+    padding: var(--spacing-24);
+  }
+
+  @media screen and (width < 768px) {
+    gap: var(--spacing-16);
+    padding: var(--spacing-16);
+  }
+
+  .weatherSearch {
+    flex: 1;
+    max-width: 506px;
+
+    @media screen and (width < 1024px) {
+      max-width: 601px;
+    }
+
+    @media screen and (width < 886px) {
+      max-width: 483px;
+    }
+
+    @media screen and (width < 768px) {
+      max-width: 409px;
+    }
+  }
+}

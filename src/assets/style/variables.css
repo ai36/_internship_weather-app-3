@@ -1,0 +1,247 @@
+@property --color-linear-gradient-1 {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #dadada66;
+}
+@property --color-linear-gradient-2 {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #8a8a8a66;
+}
+@property --color-linear-gradient-3 {
+  syntax: "<color>";
+  inherits: true;
+  initial-value: #54545466;
+}
+@property --background-position {
+  syntax: "<length>";
+  inherits: true;
+  initial-value: 0;
+}
+
+:root {
+  --background-position: 0;
+
+  --background-image: unset;
+
+  &[data-bg="clear-sky"] {
+    --background-image: image-set(
+        url("/public/dark-clear-sky.avif") type("image/avif"),
+        url("/public/dark-clear-sky.webp") type("image/webp"),
+        url("/public/dark-clear-sky.jpg") type("image/jpeg")
+      ),
+      image-set(
+        url("/public/light-clear-sky.avif") type("image/avif"),
+        url("/public/light-clear-sky.webp") type("image/webp"),
+        url("/public/light-clear-sky.jpg") type("image/jpeg")
+      );
+  }
+
+  &[data-bg="few-clouds"] {
+    --background-image: image-set(
+        url("/public/dark-few-clouds.avif") type("image/avif"),
+        url("/public/dark-few-clouds.webp") type("image/webp"),
+        url("/public/dark-few-clouds.jpg") type("image/jpeg")
+      ),
+      image-set(
+        url("/public/light-few-clouds.avif") type("image/avif"),
+        url("/public/light-few-clouds.webp") type("image/webp"),
+        url("/public/light-few-clouds.jpg") type("image/jpeg")
+      );
+  }
+
+  &[data-bg="scattered-clouds"] {
+    --background-image: image-set(
+        url("/public/dark-scattered-clouds.avif") type("image/avif"),
+        url("/public/dark-scattered-clouds.webp") type("image/webp"),
+        url("/public/dark-scattered-clouds.jpg") type("image/jpeg")
+      ),
+      image-set(
+        url("/public/light-scattered-clouds.avif") type("image/avif"),
+        url("/public/light-scattered-clouds.webp") type("image/webp"),
+        url("/public/light-scattered-clouds.jpg") type("image/jpeg")
+      );
+  }
+
+  &[data-bg="broken-clouds"] {
+    --background-image: image-set(
+        url("/public/dark-broken-clouds.avif") type("image/avif"),
+        url("/public/dark-broken-clouds.webp") type("image/webp"),
+        url("/public/dark-broken-clouds.jpg") type("image/jpeg")
+      ),
+      image-set(
+        url("/public/light-broken-clouds.avif") type("image/avif"),
+        url("/public/light-broken-clouds.webp") type("image/webp"),
+        url("/public/light-broken-clouds.jpg") type("image/jpeg")
+      );
+  }
+
+  &[data-bg="shower-rain"] {
+    --background-image: image-set(
+        url("/public/dark-shower-rain.avif") type("image/avif"),
+        url("/public/dark-shower-rain.webp") type("image/webp"),
+        url("/public/dark-shower-rain.jpg") type("image/jpeg")
+      ),
+      image-set(
+        url("/public/light-shower-rain.avif") type("image/avif"),
+        url("/public/light-shower-rain.webp") type("image/webp"),
+        url("/public/light-shower-rain.jpg") type("image/jpeg")
+      );
+  }
+
+  &[data-bg="rain"] {
+    --background-image: image-set(
+        url("/public/dark-rain.avif") type("image/avif"),
+        url("/public/dark-rain.webp") type("image/webp"),
+        url("/public/dark-rain.jpg") type("image/jpeg")
+      ),
+      image-set(
+        url("/public/light-rain.avif") type("image/avif"),
+        url("/public/light-rain.webp") type("image/webp"),
+        url("/public/light-rain.jpg") type("image/jpeg")
+      );
+  }
+
+  &[data-bg="thunderstorm"] {
+    --background-image: image-set(
+        url("/public/dark-thunderstorm.avif") type("image/avif"),
+        url("/public/dark-thunderstorm.webp") type("image/webp"),
+        url("/public/dark-thunderstorm.jpg") type("image/jpeg")
+      ),
+      image-set(
+        url("/public/light-thunderstorm.avif") type("image/avif"),
+        url("/public/light-thunderstorm.webp") type("image/webp"),
+        url("/public/light-thunderstorm.jpg") type("image/jpeg")
+      );
+  }
+
+  &[data-bg="snow"] {
+    --background-image: image-set(
+        url("/public/dark-snow.avif") type("image/avif"),
+        url("/public/dark-snow.webp") type("image/webp"),
+        url("/public/dark-snow.jpg") type("image/jpeg")
+      ),
+      image-set(
+        url("/public/light-snow.avif") type("image/avif"),
+        url("/public/light-snow.webp") type("image/webp"),
+        url("/public/light-snow.jpg") type("image/jpeg")
+      );
+  }
+
+  &[data-bg="mist"] {
+    --background-image: image-set(
+        url("/public/dark-mist.avif") type("image/avif"),
+        url("/public/dark-mist.webp") type("image/webp"),
+        url("/public/dark-mist.jpg") type("image/jpeg")
+      ),
+      image-set(
+        url("/public/light-mist.avif") type("image/avif"),
+        url("/public/light-mist.webp") type("image/webp"),
+        url("/public/light-mist.jpg") type("image/jpeg")
+      );
+  }
+
+  --background-image-item: image-set(
+    url("/public/light-scattered-clouds.avif") type("image/avif"),
+    url("/public/light-scattered-clouds.webp") type("image/webp"),
+    url("/public/light-scattered-clouds.jpg") type("image/jpeg")
+  );
+
+  --progress-value: 50%;
+
+  --size-8: 8px;
+  --size-12: 12px;
+  --size-16: 16px;
+  --size-20: 20px;
+  --size-24: 24px;
+  --size-32: 32px;
+  --size-40: 40px;
+  --size-48: 48px;
+  --size-56: 56px;
+
+  --spacing-4: 4px;
+  --spacing-6: 6px;
+  --spacing-8: 8px;
+  --spacing-12: 12px;
+  --spacing-16: 16px;
+  --spacing-24: 24px;
+  --spacing-32: 32px;
+  --spacing-40: 40px;
+  --spacing-48: 48px;
+  --spacing-56: 56px;
+  --spacing-64: 64px;
+  --spacing-80: 80px;
+
+  --radius-6: 6px;
+  --radius-8: 8px;
+
+  --color-stable-100: #f5f4f4;
+  --color-stable-200: #dadada;
+  --color-stable-300: #b7b6b6;
+  --color-stable-400: #a6a6a6;
+  --color-stable-500: #8a8a8a;
+  --color-stable-600: #707070;
+  --color-stable-700: #545454;
+  --color-stable-800: #393939;
+  --color-stable-900: #202020;
+}
+
+:root[data-theme="light"] {
+  color-scheme: light;
+
+  --transition-duration: 0.5s;
+
+  --shadow-right: 2px 0 6px #00000026;
+  --shadow-left: -2px 0 6px #00000026;
+
+  --color-tone-100: #f5f4f466;
+  --color-tone-200: #dadada66;
+  --color-tone-500: #8a8a8a66;
+  --color-tone-600: #7070701a;
+
+  --color-filled-100: #f5f4f4;
+  --color-filled-200: #dadada;
+  --color-filled-300: #b7b6b6;
+  --color-filled-400: #a6a6a6;
+  --color-filled-500: #8a8a8a;
+  --color-filled-600: #707070;
+  --color-filled-700: #545454;
+  --color-filled-800: #393939;
+  --color-filled-900: #202020;
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+
+  --transition-duration: 0.5s;
+
+  --background-position: 100vw;
+  
+  --background-image-item: image-set(
+    url("/public/dark-scattered-clouds.avif") type("image/avif"),
+    url("/public/dark-scattered-clouds.webp") type("image/webp"),
+    url("/public/dark-scattered-clouds.jpg") type("image/jpeg")
+  );
+
+  --shadow-right: 2px 0 6px #00000040;
+  --shadow-left: -2px 0 6px #00000040;
+
+  --color-tone-100: #1e1e1e99;
+  --color-tone-200: #26262699;
+  --color-tone-400: #4e4e4e99;
+  --color-tone-500: #5555551a;
+
+  --color-filled-100: #202020;
+  --color-filled-200: #262626;
+  --color-filled-300: #393939;
+  --color-filled-400: #4e4e4e;
+  --color-filled-500: #8a8a8a;
+  --color-filled-600: #797979;
+  --color-filled-700: #b7b6b6;
+  --color-filled-800: #dadada;
+  --color-filled-900: #f5f4f4;
+
+  --color-linear-gradient-1: #26262666;
+  --color-linear-gradient-2: #4e4e4e66;
+  --color-linear-gradient-3: #b7b6b666;
+}

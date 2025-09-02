@@ -1,0 +1,65 @@
+.btn {
+  display: flex;
+  align-items: center;
+  border: none;
+  cursor: pointer;
+  user-select: none;
+  height: var(--size-48);
+  border-radius: var(--radius-8);
+  padding: var(--spacing-12) var(--spacing-16);
+  background-color: var(--color-tone-100);
+  color: var(--color-filled-900);
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  opacity: 1;
+
+  transition-duration: var(--transition-duration);
+  transition-property: color, background-color;
+
+  @media screen and (width < 768px) {
+    height: var(--size-32);
+    padding: var(--spacing-8) var(--spacing-12);
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  & svg {
+    width: var(--size-24);
+    height: var(--size-24);
+    color: var(--color-filled-700);
+
+    transition-duration: var(--transition-duration);
+    transition-property: color;
+
+    @media screen and (width < 768px) {
+      width: var(--size-16);
+      height: var(--size-16);
+    }
+  }
+
+  &:hover {
+    background-color: var(--color-filled-200);
+  }
+
+  &:focus-visible {
+    background-color: var(--color-filled-200);
+    outline: 3px solid var(--color-tone-500);
+    outline-offset: -6px;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    background-color: var(--color-tone-100);
+    color: var(--color-filled-700);
+    cursor: not-allowed;
+  }
+
+  &.secondary {
+    background-color: unset;
+
+    &:hover {
+      background-color: var(--color-filled-200);
+    }
+  }
+}

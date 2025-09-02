@@ -1,0 +1,45 @@
+.geoBtn {
+  position: absolute;
+  inset: 0;
+  left: unset;
+  z-index: 2;
+  display: flex;
+  width: var(--size-56);
+  height: var(--size-48);
+  box-shadow: var(--shadow-left);
+  background-color: var(--color-tone-600);
+  color: var(--color-filled-700);
+
+  transition-duration: var(--transition-duration);
+  transition-property: background-color;
+
+  @media screen and (width < 768px) {
+    width: var(--size-40);
+    height: var(--size-32);
+  }
+
+  &:hover {
+    background-color: var(--color-filled-200);
+  }
+
+  &:focus-visible {
+    background-color: var(--color-filled-200);
+    outline: 3px solid var(--color-tone-500);
+    outline-offset: -6px;
+  }
+}
+
+&:focus-within {
+  .input {
+    background-color: var(--color-filled-200);
+    background-image: unset;
+  }
+
+  .searchBtn {
+    visibility: hidden;
+  }
+
+  .clearBtn {
+    visibility: visible;
+  }
+}

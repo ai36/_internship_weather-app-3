@@ -1,0 +1,44 @@
+.logoBox {
+  display: inline-flex;
+
+  .logo {
+    width: 192px;
+    height: 48px;
+    color: light-dark(var(--color-filled-900), var(--color-filled-700));
+
+    transition-duration: var(--transition-duration);
+    transition-property: color;
+
+    @media screen and (width < 1024px) {
+      display: none;
+    }
+  }
+
+  &:focus-visible {
+    border-radius: calc(0.25 * var(--radius-6));
+    outline: 3px solid var(--color-tone-100);
+    outline-offset: 6px;
+  }
+
+  .logoMobile {
+    display: none;
+    width: 56px;
+    height: 48px;
+
+    color: light-dark(var(--color-filled-900), var(--color-filled-700));
+
+    transition-duration: var(--transition-duration);
+    transition-property: color;
+
+    @media screen and (width < 1024px) {
+      display: block;
+    }
+
+    @media screen and (width < 768px) {
+      width: 32px;
+      height: 32px;
+    }
+  }
+
+}
+

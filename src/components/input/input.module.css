@@ -1,0 +1,129 @@
+.wrapper {
+  position: relative;
+  overflow: hidden;
+  flex: 1;
+
+  .input {
+    width: 100%;
+    height: var(--size-48);
+    padding-block: var(--spacing-12);
+    padding-inline: var(--spacing-16) calc(2 * var(--spacing-56));
+    border: none;
+    border-radius: var(--radius-8);
+    font-size: 20px;
+    line-height: 24px;
+    color: var(--color-filled-900);
+    background-color: var(--color-tone-100);
+    outline: none;
+
+    transition-duration: var(--transition-duration);
+    transition-property: color, background-color;
+
+    @media screen and (width < 768px) {
+      height: var(--size-32);
+      padding-block: var(--spacing-8);
+      padding-inline: var(--spacing-12) calc(2 * var(--spacing-40));
+      font-size: 14px;
+      line-height: 16px;
+      background-position: center right var(--spacing-12);
+      background-size: var(--size-16) var(--size-16);
+    }
+
+    &::placeholder {
+      color: var(--color-filled-600);
+    }
+
+    &:hover {
+      background-color: var(--color-filled-200);
+    }
+
+    &:focus,
+    &:not(:placeholder-shown) {
+      background-color: var(--color-filled-200);
+
+      & ~ .searchBtn {
+        visibility: hidden;
+      }
+
+      & ~ .clearBtn {
+        visibility: visible;
+      }
+    }
+
+    &::-webkit-search-cancel-button {
+      display: none;
+    }
+  }
+
+  .searchBtn {
+    position: absolute;
+    top: 50%;
+    right: calc(var(--spacing-16) + var(--size-56));
+    transform: translateY(-50%);
+    pointer-events: none;
+
+    @media screen and (width < 768px) {
+      right: calc(var(--spacing-12) + var(--size-40));
+    }
+
+    .searchIcon {
+      width: var(--size-24);
+      height: var(--size-24);
+      color: var(--color-filled-700);
+
+      transition: color var(--transition-duration);
+
+      @media screen and (width < 768px) {
+        width: var(--size-16);
+        height: var(--size-16);
+      }
+    }
+  }
+
+  .clearBtn {
+    position: absolute;
+    top: 50%;
+    right: calc(var(--spacing-16) + var(--size-56));
+    visibility: hidden;
+    transform: translateY(-50%);
+
+    @media screen and (width < 768px) {
+      right: calc(var(--spacing-12) + var(--size-40));
+    }
+
+    .closeIcon {
+      width: var(--size-24);
+      height: var(--size-24);
+      fill: currentColor;
+      color: var(--color-filled-700);
+
+      transition: color var(--transition-duration);
+
+      @media screen and (width < 768px) {
+        width: var(--size-16);
+        height: var(--size-16);
+      }
+
+      &:hover {
+        color: var(--color-filled-900);
+      }
+    }
+
+    &:focus,
+    &:active {
+      visibility: visible;
+    }
+
+    &:focus-visible {
+      border-radius: calc(0.5 * var(--radius-6));
+      outline: 3px solid var(--color-tone-500);
+      outline-offset: 3px;
+    }
+  }
+  
+  &:has(.clearBtn:hover) {
+    .searchBtn {
+      display: none;
+    }
+  }
+}

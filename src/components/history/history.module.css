@@ -1,0 +1,78 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: var(--spacing-16);
+  margin-bottom: var(--spacing-12);
+
+  @media screen and (width < 768px) {
+    gap: var(--spacing-12);
+    margin-bottom: var(--spacing-8);
+  }
+  
+  .title {
+    font-size: 24px;
+    line-height: 32px;
+  
+    @media screen and (width < 768px) {
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
+}
+
+.clearBtn {
+  color: var(--color-filled-700);
+
+  transition-duration: var(--transition-duration);
+  transition-property: color;
+
+  .icon {
+    width: var(--size-24);
+    height: var(--size-24);
+
+    @media screen and (width < 768px) {
+      width: var(--size-16);
+      height: var(--size-16);
+    }
+  }
+
+  &:hover {
+    color: var(--color-filled-900);
+  }
+
+  &:disabled {
+    color: light-dark(var(--color-filled-500), var(--color-filled-400));
+
+    &:hover {
+      cursor: not-allowed;
+    }
+  }
+
+  &:focus-visible {
+    border-radius: calc(0.25 * var(--radius-6));
+    outline: 3px solid var(--color-tone-500);
+    outline-offset: 3px;
+  }
+}
+
+.emptyMessage {
+  font-size: 20px;
+  line-height: 24px;
+  color: var(--color-filled-700);
+
+  @media screen and (width < 768px) {
+    font-size: 14px;
+    line-height: 16px;
+  }
+}
+
+.queriesList {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-12);
+
+  @media screen and (width < 768px) {
+    gap: var(--spacing-8);
+  }
+}

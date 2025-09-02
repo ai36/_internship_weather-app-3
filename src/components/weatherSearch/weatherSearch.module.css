@@ -1,0 +1,50 @@
+.container {
+  position: relative;
+
+  .form {
+    display: flex;
+    justify-content: space-between;
+    gap: 70px;
+
+    transition-duration: var(--transition-duration);
+    transition-property: gap;
+
+    @media screen and (width < 1024px) {
+      gap: 91px;
+    }
+
+    @media screen and (width < 640px) {
+      gap: 16px;
+    }
+
+    transition-duration: var(--transition-duration);
+    transition-property: column-gap;
+
+    > div {
+      flex: var(--input-width);
+
+      ~ label {
+        flex-grow: 104;
+        flex-shrink: 1;
+        flex-basis: 0;
+
+        transition-duration: var(--transition-duration);
+        transition-property: flex-grow;
+
+        @media screen and (width < 768px) {
+          flex: 72;
+        }
+      }
+    }
+  }
+
+  .isPanelOpen {
+    gap: 0;
+
+    > div {
+      ~ label {
+        flex-grow: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,75 @@
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spacing-16);
+  background-color: var(--color-tone-100);
+  color: var(--color-filled-900);
+
+  transition-duration: var(--transition-duration);
+  transition-property: background-color, color;
+
+  @media screen and (width < 768px) {
+    gap: var(--spacing-12);
+  }
+
+  .img {
+    display: block;
+    width: var(--size-32);
+    width: var(--size-32);
+    color: var(--color-filled-700);
+
+    transition-duration: var(--transition-duration);
+    transition-property: color;
+
+    @media screen and (width < 768px) {
+      width: var(--size-24);
+      height: var(--size-24);
+    }
+  }
+
+  .title {
+    font-size: 16px;
+    line-height: 20px;
+
+    @media screen and (width < 768px) {
+      font-size: 12px;
+      line-height: 16px;
+    }
+  }
+
+  .value {
+    font-size: 32px;
+    line-height: 1;
+
+    @media screen and (width < 768px) {
+      font-size: 22px;
+    }
+  }
+
+  .bottom {
+    width: 100%;
+  }
+
+  .info {
+    width: 100%;
+    font-size: 12px;
+    line-height: 16px;
+    text-align: center;
+    color: var(--color-filled-800);
+    word-break: break-all;
+
+    transition-duration: var(--transition-duration);
+    transition-property: color;
+
+    @media screen and (width < 768px) {
+      font-size: 10px;
+      line-height: 12px;
+    }
+
+    &.interval {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}
